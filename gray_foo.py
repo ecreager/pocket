@@ -12,4 +12,4 @@ if False:
 
 
 if True:
-	gray_code.single_1d_gray_code(n=5, m=5)
+	gray_code.single_1d_gray_code(n=7, m=7)

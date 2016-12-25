@@ -90,7 +90,7 @@ def single_1d_gray_code(n, m=None, do_print=True, looping=True):
 		print('soln')
 		for i, key in enumerate(soln.keys()):
 			print('%i | %s' % (i, format(soln[all_keys[i]], format_flag)))
-	return soln
+	return numeric_soln(soln, all_keys)
 
 
 def get_unique_variables(n):  # get 2**n unique variable names
@@ -101,3 +101,11 @@ def get_unique_variables(n):  # get 2**n unique variable names
 	for i in range(1, n_alphabets):	
 		variables = letters + [a + b for a, b in zip(letters*i, variables)]
 	return variables[:2**n]
+
+def numeric_soln(soln, all_keys):  # convert from symbolic keys to numeric ones
+	nsoln = dict()
+	for i, key in enumerate(soln.keys()):
+		nsoln[i] = soln[all_keys[i]]
+	return nsoln
+
+
