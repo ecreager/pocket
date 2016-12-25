@@ -1,3 +1,8 @@
+import numpy
+from constraint import *
+import string
+import scipy.spatial
+
 def gray_code_bits(n):
 	if (not (n % 1.0 == 0.0)) or (n < 1):
 		print(n)
@@ -11,10 +16,55 @@ def gray_code_bits(n):
 		return ['0' + b for b in bits] + ['1' + b for b in reversed(bits)]
 
 
-def gray_code(n):
+def reflected_binary_code(n):
 	bits = gray_code_bits(n)
 	d = dict()
 	for i, j in zip(range(2**n), bits):
 		d[i] = j
 	return d
 
+def print_possible_shifts(n):
+	possible_shifts = dict()
+	for i in range(2**n):
+		possible_shifts[i] = [i ^ (1 << j) for j in range(n)]
+
+	for num, shift in possible_shifts.iteritems():
+		formatted_shift = [format(x, format_flag)  for x in shift]
+		print('possible shifts for %s: %s' % (format(num, format_flag), formatted_shift))
+	return
+
+
+def valid_neighbors(a, b, format_flag):
+	return (hamming(a, b, format_flag) == 1)
+
+
+def hamming(a, b, format_flag):
+	a_binary, b_binary = format(a, format_flag), format(b, format_flag)
+	count = 0
+	for aa, bb in zip(list(a_binary), list(b_binary)):
+		if aa != bb:
+			count += 1
+	return count
+
+
+def solve_1d_gray_code(n, do_print=True, looping=True):
+	all_keys = string.ascii_lowercase
+	format_flag = '0%ib' % n
+
+	problem = Problem()
+	problem.addVariables(all_keys[:2**n], range(2**n))
+	problem.addConstraint(AllDifferentConstraint())
+	for i in range(2**n-1):
+		problem.addConstraint(lambda a, b: valid_neighbors(a, b, format_flag), (all_keys[i], all_keys[i+1]))
+	problem.addConstraint(lambda a: a == 0, (all_keys[0]))
+	if looping:  # only one bit switch from last to first code value
+		problem.addConstraint(lambda a, b: valid_neighbors(a, b, format_flag), (all_keys[0], all_keys[2**n-1]))
+	else:  # go from start to end of range, e.g., 000 --- 111
+		problem.addConstraint(lambda a: a == 2**n-1, (all_keys[2**n-1]))
+	solns = problem.getSolutions()
+
+	if do_print:
+		for j, soln in enumerate(solns):
+			print('soln # %i/%i' % (j, len(solns)))
+			for i, key in enumerate(soln.keys()):
+				print('%i | %s' % (i, format(soln[all_keys[i]], format_flag)))
