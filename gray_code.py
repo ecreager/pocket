@@ -47,12 +47,14 @@ def hamming(a, b, format_flag):
 	return count
 
 
-def solve_1d_gray_code(n, do_print=True, looping=True):
-	all_keys = string.ascii_lowercase
-	format_flag = '0%ib' % n
+def solve_1d_gray_code(n, m=None, do_print=True, looping=True):
+	if m is None:
+		m = n
+	all_keys = list(string.ascii_lowercase)
+	format_flag = '0%ib' % m
 
 	problem = Problem()
-	problem.addVariables(all_keys[:2**n], range(2**n))
+	problem.addVariables(all_keys[:2**n], range(2**m))
 	problem.addConstraint(AllDifferentConstraint())
 	for i in range(2**n-1):
 		problem.addConstraint(lambda a, b: valid_neighbors(a, b, format_flag), (all_keys[i], all_keys[i+1]))
