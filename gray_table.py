@@ -1,6 +1,7 @@
 import gray_code
 import os
 
+
 def write_gray_table():
     """write a Gray code max msp table"""
     filename = 'gray_table.txt'
