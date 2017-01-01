@@ -2,7 +2,7 @@ import gray_code
 import os
 
 
-def write_gray_coll(n=8, m=7):
+def write_gray_coll(n=8, m=7, filename='gray_lookup_2d.txt'):
     """make 2d lookup table of m-bit binary numbers arranged according to Gray code in n-by-n square
     then write it to disk in a Max/MSP-friendly way"""
     code = gray_code.single_2d_gray_code(n=n, m=m, do_print=True)
@@ -12,8 +12,6 @@ def write_gray_coll(n=8, m=7):
         for j in range(n):
             string += '%i ' % code['(%i, %i)' % (i, j)]
         string += ';\n'
-
-    filename = '2d_table.txt'
     if os.path.exists(filename):
         os.remove(filename)
     with open(filename, "w") as f:

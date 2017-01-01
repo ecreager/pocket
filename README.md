@@ -1,8 +1,10 @@
-# pocket :jeans:
+# :jeans: pocket :jeans:
 
-hacking on semantic level music data: synths and sequencers
+  hacking on music ~ {synths, sequencers, control} ~ in progress ~ just for fun
 
-disclaimer ~ work in progress
+### projects
+* _gray_  - Max patches for mapping x-y coordinates onto note space via Gray codes
+* _misc_ -  extras
 
 ### python dependencies (install via pip)
 * numpy

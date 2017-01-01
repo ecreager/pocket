@@ -31,6 +31,20 @@
 				"box" : 				{
 					"fontname" : "Courier",
 					"fontsize" : 12.0,
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 510.0, 586.970947, 90.0, 18.0 ],
+					"text" : "loadmess 90"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Courier",
+					"fontsize" : 12.0,
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -698,6 +712,7 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Courier",
@@ -791,8 +806,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 55.325699, 100.0, 176.0, 18.0 ],
-									"text" : "loadmess gray_table.txt"
+									"patching_rect" : [ 55.325699, 100.0, 205.0, 18.0 ],
+									"text" : "loadmess gray_lookup_1d.txt"
 								}
 
 							}
@@ -1264,6 +1279,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-68", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1525,29 +1549,29 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "gray_table.txt",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"name" : "gray_lookup_1d.txt",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "seven_binary_bits.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tonebank.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tone.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

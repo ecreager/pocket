@@ -2,12 +2,9 @@ import gray_code
 import os
 
 
-def write_gray_table():
-    """write a Gray code max msp table"""
-    filename = 'gray_table.txt'
+def write_gray_code_1d(n=7, m=7, filename='gray_lookup_1d.txt'):
+    """write a 1-D Gray code to disk in a Max/MSP-friendly way"""
     string = 'table '
-    n = 7
-    m = 7
     code = gray_code.single_1d_gray_code(n=n, m=m, do_print=True)
     for value in code.values():
         string += '%i ' % value
@@ -17,5 +14,6 @@ def write_gray_table():
         f.write(string)
     print('wrote table to disk')
 
+
 if __name__ == '__main__':
-    write_gray_table()
+    write_gray_code_1d()

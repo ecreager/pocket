@@ -1270,7 +1270,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 9.102993, 324.294495, 97.0, 18.0 ],
-					"text" : "loadmess 100"
+					"text" : "loadmess 90"
 				}
 
 			}
@@ -1837,8 +1837,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 55.325699, 100.0, 162.0, 18.0 ],
-									"text" : "loadmess 2d_table.txt"
+									"patching_rect" : [ 55.325699, 100.0, 205.0, 18.0 ],
+									"text" : "loadmess gray_lookup_2d.txt"
 								}
 
 							}
@@ -1957,7 +1957,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 107.936867, 118.804001, 147.0, 18.0 ],
+					"patching_rect" : [ 107.936867, 118.804001, 140.0, 18.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Courier",
@@ -1971,7 +1971,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p load_default_coll"
+					"text" : "p load_gray_lookup"
 				}
 
 			}
@@ -2577,35 +2577,35 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "seven_binary_bits.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tonebank.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "tone.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "quantize_midi.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "choose_n_notes.maxpat",
-				"bootpath" : "/Users/ecreager/git/pocket",
+				"bootpath" : "/Users/ecreager/git/pocket/gray",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
