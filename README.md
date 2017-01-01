@@ -3,8 +3,8 @@
   hacking on music ~ {synths, sequencers, control} ~ in progress ~ just for fun
 
 ### projects
-* _gray_  - Max patches for mapping x-y coordinates onto note space via Gray codes
-* _misc_ -  extras
+* [gray](https://github.com/ecreager/pocket/tree/master/gray)  - Max patches for mapping x-y coordinates onto note space via Gray codes
+* [misc](https://github.com/ecreager/pocket/tree/master/misc) -  extras
 
 ### python dependencies (install via pip)
 * numpy
