@@ -51,7 +51,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 100.582382, 162.719055, 133.0, 18.0 ],
-					"text" : "rampsmooth~ 50 50"
+					"text" : "rampsmooth~ 75 75"
 				}
 
 			}
