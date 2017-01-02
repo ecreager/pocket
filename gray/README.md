@@ -37,14 +37,20 @@ Given tuples of two integers like _(x, y)_, the 2-D Gray code finds a binary enc
 * `2d.maxpat`
  * maps x-y space (quantized to an 8-by-8 square) onto 7-bit binary vectors according to a 2-D Gray code.
  * The binary code words control whether each note in a configurable seven-note set is on or off.
- * Use the patch to explore different chords and chord voicings.
+ * Use the patch to explore different chords and chord voicings; I use the Korg KP3 as a x-y position MIDI interface, but you can also use the mouse.
 * `independent_stereo.maxpat`
  * x- and y-axes are mapped to note activity by  independent gray codes.
  * Each axis has a different set of notes and is assigned to a different stereo channel.
+* The rest of the patches in this repo are helpers for these two.
 
 ### python scripts
 * `write_gray_code_1d.py`
  * Finds a 1-D Gray code solution and writes it to disk for interpretation by the max patch. `independent_stereo.maxpat`
+ * You can solve for codes of different code length (_n_) and word length (_m_).
+   * If you do, also change the defaults on `independent_stereo.maxpat` (_n=7_ and _m=7_).
+   * Some combinations of _m_ and _n_ do not have feasible solutions.
+
 * `write_gray_code_2d.py`
  * Finds a 2-D Gray code solution and writes it to disk for interpretation by the max patch `2d.maxpat`.
- * You can solve for codes of different code length (_n_) and word length (_m_), but only _n=8_ and _m=7_  is supported by the max patches.
+ * You can solve for codes of different code length (_n_) and word length (_m_).
+   * If you do, also change the defaults on `2d.maxpat` (_n=8_ and _m=7_).

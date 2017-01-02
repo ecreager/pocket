@@ -7,7 +7,7 @@ def write_gray_code_1d(n=7, m=7, filename='gray_lookup_1d.txt'):
     string = 'table '
     code = gray_code.single_1d_gray_code(n=n, m=m, do_print=True)
     for value in code.values():
-        string += '%i ' % value
+        string += '%i ' % value 
     if os.path.exists(filename):
         os.remove(filename)
     with open(filename, "w") as f:

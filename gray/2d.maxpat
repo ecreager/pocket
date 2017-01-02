@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 3.0, 98.0, 1093.0, 652.0 ],
+		"rect" : [ 3.0, 124.0, 1093.0, 626.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,21 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Courier",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-22",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 635.0, 623.867981, 282.886841, 30.0 ],
+					"text" : "shift-click-drag to move kslider inside bpatcher frame"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Courier",
 					"fontsize" : 12.0,
@@ -976,7 +991,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.602993, 189.655151, 32.0, 18.0 ],
-					"text" : "s m"
+					"text" : "s n"
 				}
 
 			}
@@ -1309,7 +1324,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 985.0, 435.161682, 32.0, 18.0 ],
-					"text" : "r n"
+					"text" : "r m"
 				}
 
 			}
@@ -1468,7 +1483,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.602993, 245.655151, 32.0, 18.0 ],
-					"text" : "s n"
+					"text" : "s m"
 				}
 
 			}
@@ -1538,7 +1553,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 945.8302, 385.294495, 32.0, 18.0 ],
-					"text" : "r m"
+					"text" : "r n"
 				}
 
 			}
@@ -1625,7 +1640,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 735.849976, 385.294495, 32.0, 18.0 ],
-					"text" : "r m"
+					"text" : "r n"
 				}
 
 			}
